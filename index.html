@@ -2,23 +2,231 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Farhad Dev | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhad | Portfolio</title>
     <style>
-        body { background: #0f172a; color: white; font-family: sans-serif; padding: 20px; }
-        .card { background: #1e293b; padding: 15px; border-radius: 10px; margin-bottom: 10px; }
-        .btn { display: block; padding: 10px; background: #38bdf8; text-align: center; text-decoration: none; color: black; font-weight: bold; border-radius: 5px; }
+        :root {
+            --bg-color: #0b0b1a;
+            --card-bg: #161633;
+            --accent-color: #00ffcc;
+            --secondary-accent: #ff007f;
+            --text-color: #ffffff;
+            --text-muted: #a0a0c0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+            margin: 0;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--secondary-accent);
+            border-bottom: 2px solid var(--secondary-accent);
+            padding-bottom: 5px;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid #2a2a50;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: var(--accent-color);
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tech-tags span {
+            background: rgba(0, 255, 204, 0.1);
+            color: var(--accent-color);
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 255, 204, 0.2);
+        }
+
+        .repo-btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--secondary-accent);
+            border: 2px solid var(--secondary-accent);
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .repo-btn:hover {
+            background: var(--secondary-accent);
+            color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid #1a1a3a;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
-    <div style="max-width: 500px; margin: auto;">
-        <h1>My Projects</h1>
+
+    <header>
+        <h1>🚀 Farhad's Portfolio</h1>
+        <p>Web Developer & Game Creator | Building Awesome JavaScript & HTML Projects</p>
+    </header>
+
+    <div class="container">
+        <div class="section-title">Featured Projects</div>
         
-        <div class="card"><h3>1. Quiz-Game</h3><a href="https://farhad-web-dev.github.io/Quiz-game-/" class="btn">Live Demo</a></div>
-        <div class="card"><h3>2. Tic-Tac-Toe</h3><a href="https://farhad-web-dev.github.io/tic-tac-toe./" class="btn">Live Demo</a></div>
-        <div class="card"><h3>3. Firdos Hosiery</h3><a href="https://farhad-web-dev.github.io/Firdoshosiery/" class="btn">Live Demo</a></div>
-        <div class="card"><h3>4. Calculator</h3><a href="https://farhad-web-dev.github.io/Calculator-/" class="btn">Live Demo</a></div>
-        <div class="card"><h3>5. Runner Game</h3><a href="https://farhad-web-dev.github.io/Infinite-Runner-Game/" class="btn">Live Demo</a></div>
-        <div class="card"><h3>6. 2D Craft Game</h3><a href="https://farhad-web-dev.github.io/2D-Craft-Mini-Game/" class="btn">Live Demo</a></div>
+        <div class="projects-grid">
+            <!-- Car Game -->
+            <div class="project-card">
+                <h3>🚗 Car-game (Neon Cyber Car PRO MAX)</h3>
+                <p>An immersive arcade car-dodging game featuring a custom garage lobby, vehicle shop system with local storage persistence, smooth mobile/keyboard controls, and custom audio effects.</p>
+                <div class="tech-tags">
+                    <span>HTML5 Canvas</span>
+                    <span>JavaScript</span>
+                    <span>Web Audio API</span>
+                </div>
+                <a href="https://github.com/farhad-web-dev/Car-game" target="_blank" class="repo-btn">View Repository</a>
+            </div>
+
+            <!-- 2D Craft Mini Game -->
+            <div class="project-card">
+                <h3>🛠️ 2D-Craft-Mini-Game</h3>
+                <p>A fun 2D crafting and building sandbox mini-game inspired by retro block-world mechanics, optimized for interactive web experiences.</p>
+                <div class="tech-tags">
+                    <span>JavaScript</span>
+                    <span>HTML5 Canvas</span>
+                    <span>CSS3</span>
+                </div>
+                <a href="https://github.com/farhad-web-dev/2D-Craft-Mini-Game" target="_blank" class="repo-btn">View Repository</a>
+            </div>
+
+            <!-- Infinite Runner Game -->
+            <div class="project-card">
+                <h3>🏃‍♂️ Infinite-Runner-Game</h3>
+                <p>A fast-paced side-scrolling runner game featuring dynamic obstacle spawning, collision detection, and high-score tracking.</p>
+                <div class="tech-tags">
+                    <span>JavaScript</span>
+                    <span>Game Loop</span>
+                    <span>CSS Animation</span>
+                </div>
+                <a href="https://github.com/farhad-web-dev/Infinite-Runner-Game" target="_blank" class="repo-btn">View Repository</a>
+            </div>
+
+            <!-- Calculator -->
+            <div class="project-card">
+                <h3>🔢 Calculator-</h3>
+                <p>A sleek, modern, and fully responsive calculator web application designed with clean UI aesthetics for precise calculations.</p>
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/farhad-web-dev/Calculator-" target="_blank" class="repo-btn">View Repository</a>
+            </div>
+
+            <!-- Quiz Game -->
+            <div class="project-card">
+                <h3>❓ Quiz-game</h3>
+                <p>An interactive multiple-choice quiz application featuring real-time score tracking, dynamic question rendering, and clean UI transitions.</p>
+                <div class="tech-tags">
+                    <span>JavaScript</span>
+                    <span>DOM Manipulation</span>
+                    <span>CSS3</span>
+                </div>
+                <a href="https://github.com/farhad-web-dev/Quiz-game" target="_blank" class="repo-btn">View Repository</a>
+            </div>
+
+            <!-- Tic-Tac-Toe -->
+            <div class="project-card">
+                <h3>❌ Tic-Tac-Toe</h3>
+                <p>A classic, responsive two-player puzzle game featuring clean grid animations, win-state detection, and interactive gameplay logic.</p>
+                <div class="tech-tags">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>DOM</span>
+                </div>
+                <a href="https://github.com/farhad-web-dev/tic-tac-toe." target="_blank" class="repo-btn">View Repository</a>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Farhad. All rights reserved. Built with passion and code. 🔥</p>
+    </footer>
+
 </body>
 </html>
