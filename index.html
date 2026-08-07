@@ -109,12 +109,19 @@
             border: 1px solid rgba(0, 255, 204, 0.2);
         }
 
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
         .repo-btn {
+            flex: 1;
             display: inline-block;
             background: transparent;
             color: var(--secondary-accent);
             border: 2px solid var(--secondary-accent);
-            padding: 8px 15px;
+            padding: 8px 10px;
             border-radius: 8px;
             text-decoration: none;
             font-size: 13px;
@@ -127,6 +134,18 @@
             background: var(--secondary-accent);
             color: #ffffff;
             box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+        }
+
+        .play-btn {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            border-color: var(--accent-color);
+        }
+
+        .play-btn:hover {
+            background: transparent;
+            color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
         }
 
         footer {
@@ -159,7 +178,10 @@
                     <span>JavaScript</span>
                     <span>Web Audio API</span>
                 </div>
-                <a href="https://github.com/farhad-web-dev/Car-game" target="_blank" class="repo-btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Car-game/" target="_blank" class="repo-btn play-btn">🎮 Play</a>
+                    <a href="https://github.com/farhad-web-dev/Car-game" target="_blank" class="repo-btn">Code</a>
+                </div>
             </div>
 
             <!-- 2D Craft Mini Game -->
@@ -171,7 +193,10 @@
                     <span>HTML5 Canvas</span>
                     <span>CSS3</span>
                 </div>
-                <a href="https://github.com/farhad-web-dev/2D-Craft-Mini-Game" target="_blank" class="repo-btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/2D-Craft-Mini-Game/" target="_blank" class="repo-btn play-btn">🎮 Play</a>
+                    <a href="https://github.com/farhad-web-dev/2D-Craft-Mini-Game" target="_blank" class="repo-btn">Code</a>
+                </div>
             </div>
 
             <!-- Infinite Runner Game -->
@@ -183,7 +208,10 @@
                     <span>Game Loop</span>
                     <span>CSS Animation</span>
                 </div>
-                <a href="https://github.com/farhad-web-dev/Infinite-Runner-Game" target="_blank" class="repo-btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Infinite-Runner-Game/" target="_blank" class="repo-btn play-btn">🎮 Play</a>
+                    <a href="https://github.com/farhad-web-dev/Infinite-Runner-Game" target="_blank" class="repo-btn">Code</a>
+                </div>
             </div>
 
             <!-- Calculator -->
@@ -195,7 +223,10 @@
                     <span>CSS3</span>
                     <span>JavaScript</span>
                 </div>
-                <a href="https://github.com/farhad-web-dev/Calculator-" target="_blank" class="repo-btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Calculator-/" target="_blank" class="repo-btn play-btn">🚀 Live</a>
+                    <a href="https://github.com/farhad-web-dev/Calculator-" target="_blank" class="repo-btn">Code</a>
+                </div>
             </div>
 
             <!-- Quiz Game -->
@@ -207,7 +238,10 @@
                     <span>DOM Manipulation</span>
                     <span>CSS3</span>
                 </div>
-                <a href="https://github.com/farhad-web-dev/Quiz-game" target="_blank" class="repo-btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Quiz-game/" target="_blank" class="repo-btn play-btn">🎮 Play</a>
+                    <a href="https://github.com/farhad-web-dev/Quiz-game" target="_blank" class="repo-btn">Code</a>
+                </div>
             </div>
 
             <!-- Tic-Tac-Toe -->
@@ -219,7 +253,10 @@
                     <span>JavaScript</span>
                     <span>DOM</span>
                 </div>
-                <a href="https://github.com/farhad-web-dev/tic-tac-toe." target="_blank" class="repo-btn">View Repository</a>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/tic-tac-toe./" target="_blank" class="repo-btn play-btn">🎮 Play</a>
+                    <a href="https://github.com/farhad-web-dev/tic-tac-toe." target="_blank" class="repo-btn">Code</a>
+                </div>
             </div>
         </div>
     </div>
