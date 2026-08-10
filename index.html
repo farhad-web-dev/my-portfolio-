@@ -3,198 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhad | Portfolio</title>
-    <meta name="google-site-verification" content="YiTXofXgzL0b7BNLz76ZjfKQMBqYHdvXebNpvTJ4Ymk" />
-    <link rel="stylesheet" href="style.css">
+    <title>Farhad | Ultimate Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0614;
+            color: #ffffff;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section */
+        .header-section {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #00f3ff;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Section Heading */
+        .section-heading {
+            font-size: 1.4rem;
+            color: #ff007f;
+            text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+            margin: 40px 0 20px 10px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #ff007f;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Project Card Container */
+        .card {
+            background: rgba(20, 14, 35, 0.8);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #00f3ff;
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #00f3ff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+        }
+
+        .card-desc {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Tech Tags */
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            border: 1px solid #00f3ff;
+            color: #00f3ff;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            box-shadow: 0 0 6px rgba(0, 243, 255, 0.2);
+            background: rgba(0, 243, 255, 0.05);
+        }
+
+        /* Buttons Group */
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-play {
+            flex: 1;
+            background: #00f3ff;
+            color: #0b0614;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .btn-play:hover {
+            background: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .btn-outline {
+            flex: 1;
+            background: transparent;
+            color: #ff007f;
+            border: 2px solid #ff007f;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 0 8px rgba(255, 0, 128, 0.2);
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #ff007f;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #64748b;
+            font-size: 0.9rem;
+            padding-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="logo-title">
-            <span class="rocket">🚀</span>
-            <h1>Farhad's Portfolio</h1>
-        </div>
-        <p>Web Developer & Creator | Building Awesome Projects</p>
-    </header>
+    <!-- Header Section -->
+    <div class="header-section">
+        <h1 class="main-title">
+            <span>🚀 Farhad's Portfolio</span>
+        </h1>
+        <p class="subtitle">Web Developer & Game Creator | Building Awesome JavaScript & HTML Projects</p>
+    </div>
 
-    <main class="container">
-        <section class="section-title">
-            <h2>ALL PROJECTS & GAMES</h2>
-        </section>
+    <!-- Main Content Grid -->
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 class="section-heading">ALL PROJECTS & REPOSITORIES</h2>
+        
+        <div class="project-grid">
+            
+            <!-- 1. Car Game -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">🚗 Car-game</h3>
+                    <p class="card-desc">An immersive arcade car-dodging game featuring custom garage lobby and smooth vehicle shop system.</p>
+                    <div class="tags">
+                        <span class="tag">HTML5 Canvas</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Car-game/" class="btn-play" target="_blank">Play</a>
+                    <a href="https://github.com/farhad-web-dev/Car-game" class="btn-outline" target="_blank">Code</a>
+                </div>
+            </div>
 
-        <!-- Car Game -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">🚗</span>
-                <h3>Car-game</h3>
+            <!-- 2. Firdos Hosiery -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">👕 Firdos Hosiery</h3>
+                    <p class="card-desc">A professional business and clothing collection website designed with clean layouts.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Firdoshosiery/" class="btn-play" target="_blank">Live Demo</a>
+                    <a href="https://github.com/farhad-web-dev/Firdoshosiery" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>An immersive arcade car-dodging game featuring a custom garage lobby and vehicle shop system.</p>
-            <div class="tags">
-                <span class="tag">HTML5 Canvas</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-group">
-                <a href="car-game.html" class="btn play-btn">🎮 Play</a>
-                <a href="https://github.com/farhad-web-dev/Car-game" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- 2D Craft Mini Game -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">🛠️</span>
-                <h3>2D-Craft-Mini-Game</h3>
+            <!-- 3. Infinite Runner Game -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">🏃 Infinite Runner</h3>
+                    <p class="card-desc">Fast-paced endless runner game with obstacle avoidance and dynamic score tracking.</p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Canvas</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Infinite-Runner-Game/" class="btn-play" target="_blank">Play</a>
+                    <a href="https://github.com/farhad-web-dev/Infinite-Runner-Game" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>A fun 2D crafting and building sandbox mini-game.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-group">
-                <a href="craft-game.html" class="btn play-btn">🎮 Play</a>
-                <a href="https://github.com/farhad-web-dev/2D-Craft-Mini-Game" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- Infinite Runner Game -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">🏃‍♂️</span>
-                <h3>Infinite-Runner-Game</h3>
+            <!-- 4. 2D Craft Mini-Game -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">🧱 2D Craft Mini-Game</h3>
+                    <p class="card-desc">A fun interactive 2D crafting and building sandbox mini-game built for web browsers.</p>
+                    <div class="tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">JS Logic</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/2D-Craft-Mini-Game/" class="btn-play" target="_blank">Play</a>
+                    <a href="https://github.com/farhad-web-dev/2D-Craft-Mini-Game" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>A fast-paced infinite runner game with obstacle avoidance.</p>
-            <div class="tags">
-                <span class="tag">HTML5 Canvas</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-group">
-                <a href="runner.html" class="btn play-btn">🎮 Play</a>
-                <a href="https://github.com/farhad-web-dev/Infinite-Runner-Game" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- My Server Project -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">🌐</span>
-                <h3>My-server</h3>
+            <!-- 5. Quiz Game -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">❓ Quiz Game</h3>
+                    <p class="card-desc">An interactive quiz application featuring multiple-choice questions and score calculation.</p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">DOM</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Quiz-game-" class="btn-play" target="_blank">Play</a>
+                    <a href="https://github.com/farhad-web-dev/Quiz-game-" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>Custom server management and web portal configuration project.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">Server</span>
-            </div>
-            <div class="btn-group">
-                <a href="server.html" class="btn play-btn">✨ Open</a>
-                <a href="https://github.com/farhad-web-dev/My-server." target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- Firdoshosiery Website -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">👕</span>
-                <h3>Firdoshosiery</h3>
+            <!-- 6. Tic-Tac-Toe -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">❌ Tic-Tac-Toe</h3>
+                    <p class="card-desc">Classic 2-player grid puzzle game built with clean user interactions and winning logic.</p>
+                    <div class="tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JS</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/tic-tac-toe." class="btn-play" target="_blank">Play</a>
+                    <a href="https://github.com/farhad-web-dev/tic-tac-toe." class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>A dedicated business/store web project built with custom layout and design.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-            </div>
-            <div class="btn-group">
-                <a href="firdoshosiery.html" class="btn play-btn">🌐 View</a>
-                <a href="https://github.com/farhad-web-dev/Firdoshosiery" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- Happy Father's Day 2 -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">❤️</span>
-                <h3>Happy-fathers-day-2</h3>
+            <!-- 7. Calculator -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">🧮 Calculator</h3>
+                    <p class="card-desc">A sleek neon styled utility calculator app for quick mathematical operations.</p>
+                    <div class="tags">
+                        <span class="tag">UI Design</span>
+                        <span class="tag">JS Math</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Calculator-" class="btn-play" target="_blank">Open</a>
+                    <a href="https://github.com/farhad-web-dev/Calculator-" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>A special special-edition interactive web page dedicated as a gift.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-            </div>
-            <div class="btn-group">
-                <a href="father-day-2.html" class="btn play-btn">✨ Open</a>
-                <a href="https://github.com/farhad-web-dev/Happy-fathers-day-2" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- Happy Father's Day -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">🎁</span>
-                <h3>Happy-fathers-day</h3>
+            <!-- 8. Happy Fathers Day -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">🎉 Happy Father's Day</h3>
+                    <p class="card-desc">A special dedicated web project created as a heartfelt family gift.</p>
+                    <div class="tags">
+                        <span class="tag">Special Gift</span>
+                        <span class="tag">Web Design</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Happy-fathers-day/" class="btn-play" target="_blank">View</a>
+                    <a href="https://github.com/farhad-web-dev/Happy-fathers-day" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>A heartfelt greeting and presentation web project made with care.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-            </div>
-            <div class="btn-group">
-                <a href="father-day.html" class="btn play-btn">✨ Open</a>
-                <a href="https://github.com/farhad-web-dev/Happy-fathers-day" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- Tic-Tac-Toe -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">❌</span>
-                <h3>Tic-Tac-Toe</h3>
+            <!-- 9. Happy Fathers Day 2 -->
+            <div class="card">
+                <div>
+                    <h3 class="card-title">🎁 Father's Day 2.0</h3>
+                    <p class="card-desc">An updated version of the special family tribute project with creative UI styling.</p>
+                    <div class="tags">
+                        <span class="tag">Special</span>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="https://farhad-web-dev.github.io/Happy-fathers-day-2/" class="btn-play" target="_blank">View</a>
+                    <a href="https://github.com/farhad-web-dev/Happy-fathers-day-2" class="btn-outline" target="_blank">Code</a>
+                </div>
             </div>
-            <p>A classic modern strategy game built with clean DOM manipulation.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-group">
-                <a href="tic-tac-toe.html" class="btn play-btn">🎮 Play</a>
-                <a href="https://github.com/farhad-web-dev/tic-tac-toe." target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
 
-        <!-- Quiz Game -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">❓</span>
-                <h3>Quiz-game</h3>
-            </div>
-            <p>An interactive quiz game to test knowledge with dynamic categories.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-group">
-                <a href="quiz.html" class="btn play-btn">🎮 Play</a>
-                <a href="https://github.com/farhad-web-dev/Quiz-game-" target="_blank" class="btn code-btn">Code</a>
-            </div>
         </div>
-
-        <!-- Calculator -->
-        <div class="project-card">
-            <div class="project-header">
-                <span class="project-icon">🧮</span>
-                <h3>Calculator</h3>
-            </div>
-            <p>A clean and responsive utility calculator app for daily calculations.</p>
-            <div class="tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <div class="btn-group">
-                <a href="calculator.html" class="btn play-btn">📱 Open</a>
-                <a href="https://github.com/farhad-web-dev/Calculator-" target="_blank" class="btn code-btn">Code</a>
-            </div>
-        </div>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Farhad. All rights reserved.</p>
+        <p>© 2026 Farhad. All rights reserved.</p>
     </footer>
 
 </body>
