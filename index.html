@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhad | Ultimate Portfolio</title>
+    <title>Farhad | Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -19,29 +19,57 @@
             padding: 20px;
         }
 
-        /* Header / Hero Section */
-        .header-section {
+        /* Hero Banner (Custom Neon Logo Style) */
+        .hero-banner {
             text-align: center;
-            padding: 40px 20px 20px 20px;
+            padding: 50px 20px;
+            background: radial-gradient(circle, rgba(20,14,35,0.95) 0%, rgba(5,3,10,0.98) 100%);
+            border-bottom: 2px solid rgba(0, 243, 255, 0.3);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 35px rgba(0, 243, 255, 0.15);
         }
 
-        .main-title {
-            font-size: 2.8rem;
-            font-weight: bold;
+        .logo-image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Styling to give a glowing background frame for your logo vibe */
+        .logo-badge {
+            font-size: 4rem;
+            animation: pulseGlow 2s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { text-shadow: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(255, 0, 128, 0.3); }
+            100% { text-shadow: 0 0 20px rgba(0, 243, 255, 0.9), 0 0 40px rgba(255, 0, 128, 0.6); }
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 900;
             color: #00f3ff;
-            text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.7), 0 0 30px rgba(255, 0, 128, 0.5);
+            letter-spacing: 3px;
         }
 
-        .subtitle {
+        .hero-subtitle {
             font-size: 1.1rem;
-            color: #94a3b8;
-            margin-top: 10px;
-            letter-spacing: 0.5px;
+            color: #cbd5e1;
+            margin-top: 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .hero-tech {
+            font-size: 0.95rem;
+            color: #00f3ff;
+            margin-top: 8px;
+            opacity: 0.9;
+            letter-spacing: 1px;
         }
 
         /* Section Heading */
@@ -49,7 +77,7 @@
             font-size: 1.4rem;
             color: #ff007f;
             text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
-            margin: 40px 0 20px 10px;
+            margin: 30px 0 20px 10px;
             letter-spacing: 1px;
             border-bottom: 2px solid #ff007f;
             display: inline-block;
@@ -65,7 +93,7 @@
             margin: 0 auto;
         }
 
-        /* Project Card Container */
+        /* Project Card */
         .card {
             background: rgba(20, 14, 35, 0.8);
             border: 1px solid rgba(0, 243, 255, 0.3);
@@ -88,10 +116,7 @@
         .card-title {
             font-size: 1.4rem;
             color: #00f3ff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
         }
 
@@ -99,7 +124,7 @@
             color: #cbd5e1;
             font-size: 0.95rem;
             line-height: 1.5;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         /* Tech Tags */
@@ -180,17 +205,21 @@
 </head>
 <body>
 
-    <!-- Header Section -->
-    <div class="header-section">
-        <h1 class="main-title">
-            <span>🚀 Farhad's Portfolio</span>
-        </h1>
-        <p class="subtitle">Web Developer & Game Creator | Building Awesome JavaScript & HTML Projects</p>
+    <!-- Hero Banner with Logo Vibe -->
+    <div class="hero-banner">
+        <div class="logo-image-container">
+            <!-- Agar aapke paas logo ki image file hai, toh upar <div> ki jagah yeh image tag laga sakte hain: 
+                 <img src="logo.png" alt="Logo" style="max-width: 180px; filter: drop-shadow(0 0 10px #00f3ff);"> -->
+            <div class="logo-badge">🚀 🎮</div>
+        </div>
+        <h1 class="hero-title">FARHAD</h1>
+        <p class="hero-subtitle">PORTFOLIO: Web & Game Dev</p>
+        <p class="hero-tech">JavaScript | HTML5 | Audio API</p>
     </div>
 
     <!-- Main Content Grid -->
     <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 class="section-heading">ALL PROJECTS & REPOSITORIES</h2>
+        <h2 class="section-heading">FEATURED GAMES & APPS</h2>
         
         <div class="project-grid">
             
@@ -198,7 +227,7 @@
             <div class="card">
                 <div>
                     <h3 class="card-title">🚗 Car-game</h3>
-                    <p class="card-desc">An immersive arcade car-dodging game featuring custom garage lobby and smooth vehicle shop system.</p>
+                    <p class="card-desc">An immersive arcade car-dodging game featuring custom garage lobby and vehicle shop system.</p>
                     <div class="tags">
                         <span class="tag">HTML5 Canvas</span>
                         <span class="tag">JavaScript</span>
