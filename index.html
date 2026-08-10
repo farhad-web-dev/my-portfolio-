@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farhad | Portfolio</title>
+    <!-- Favicon (Browser Tab Logo) -->
+    <link rel="icon" type="image/jpeg" href="farhad-logo.jpg">
     <style>
         * {
             margin: 0;
@@ -33,9 +35,14 @@
             margin-right: auto;
         }
 
-        .logo-badge {
-            font-size: 2.2rem;
-            margin-bottom: 5px;
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+            margin-bottom: 10px;
         }
 
         .hero-title {
@@ -184,7 +191,7 @@
 
     <!-- Compact Hero Banner -->
     <div class="hero-banner">
-        <div class="logo-badge">🚀 🎮</div>
+        <img src="farhad-logo.jpg" alt="Farhad Logo" class="logo-img">
         <h1 class="hero-title">FARHAD</h1>
         <p class="hero-subtitle">PORTFOLIO: Web & Game Dev</p>
         <p class="hero-tech">JavaScript | HTML5 | Audio API</p>
