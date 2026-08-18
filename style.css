@@ -1,121 +1,178 @@
-body {
-    background-color: #0b0f19;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.hero {
+body {
+    background-color: #0b0614;
+    color: #ffffff;
+    overflow-x: hidden;
+    padding: 15px;
+}
+
+/* Compact Hero Banner */
+.hero-banner {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 15px;
+    background: radial-gradient(circle, rgba(20,14,35,0.95) 0%, rgba(5,3,10,0.98) 100%);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero h1 {
-    color: #00ffcc;
+.logo-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #00f3ff;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+.hero-title {
     font-size: 2.2rem;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-    margin: 10px 0;
+    font-weight: 900;
+    color: #00f3ff;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(255, 0, 128, 0.4);
+    letter-spacing: 2px;
 }
 
-.hero p {
-    color: #a0aec0;
+.hero-subtitle {
     font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
+.hero-tech {
+    font-size: 0.85rem;
+    color: #00f3ff;
+    margin-top: 4px;
+    opacity: 0.9;
 }
 
-.section-title h2 {
+/* Section Heading */
+.section-heading {
+    font-size: 1.3rem;
     color: #ff007f;
-    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+    margin: 20px 0 15px 5px;
     letter-spacing: 1px;
     border-bottom: 2px solid #ff007f;
-    padding-bottom: 8px;
-    margin-bottom: 25px;
-    text-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
+    display: inline-block;
+    padding-bottom: 3px;
 }
 
-.project-card {
-    background-color: #131b2e;
-    border: 1px solid #1f2d4a;
-    border-radius: 12px;
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Card */
+.card {
+    background: rgba(20, 14, 35, 0.8);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    border-radius: 15px;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
 }
 
-.project-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.card:hover {
+    border-color: #00f3ff;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: #00f3ff;
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+}
+
+.card-desc {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.4;
     margin-bottom: 12px;
 }
 
-.project-header h3 {
-    color: #00ffcc;
-    margin: 0;
-    font-size: 1.4rem;
-}
-
-.project-card p {
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
+/* Tech Tags */
 .tags {
     display: flex;
-    gap: 8px;
+    gap: 6px;
+    margin-bottom: 15px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
 }
 
 .tag {
-    background-color: #0f172a;
-    color: #00ffcc;
-    border: 1px solid #00ffcc44;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    border: 1px solid #00f3ff;
+    color: #00f3ff;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    background: rgba(0, 243, 255, 0.05);
 }
 
+/* Buttons Group */
 .btn-group {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
-.btn {
+.btn-play {
     flex: 1;
-    text-align: center;
-    padding: 12px;
+    background: #00f3ff;
+    color: #0b0614;
+    border: none;
+    padding: 8px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.4);
+    transition: 0.3s;
 }
 
-.play-btn {
-    background-color: #00ffcc;
-    color: #0b0f19;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
-}
-
-.code-btn {
-    background-color: transparent;
+.btn-outline {
+    flex: 1;
+    background: transparent;
     color: #ff007f;
     border: 2px solid #ff007f;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 footer {
     text-align: center;
-    padding: 30px;
+    margin-top: 40px;
     color: #64748b;
     font-size: 0.85rem;
+    padding-bottom: 15px;
 }
